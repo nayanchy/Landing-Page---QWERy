@@ -438,6 +438,7 @@ button[type="submit"] {
   position: relative;
   cursor: pointer;
   top: 5px;
+  display: none;
 }
 
 .mobile-menu-burger {
@@ -482,6 +483,10 @@ button[type="submit"] {
   .menu,
   .search {
     display: none;
+  }
+
+  .mobile-menu {
+    display: block;
   }
 
   .header-container {
