@@ -433,3 +433,46 @@ button[type="submit"] {
 #search-form::placeholder {
   color: #fff;
 }
+
+.mobile-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.mobile-menu-burger {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.mobile-menu-burger:before,
+.mobile-menu-burger:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.mobile-menu-burger::before {
+  transform: translateY(-10px);
+}
+.mobile-menu-burger::after {
+  transform: translateY(10px);
+}
+
+/* Animation */
+.menu__open .mobile-menu-burger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.menu__open .mobile-menu-burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu__open .mobile-menu-burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}

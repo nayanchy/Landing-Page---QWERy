@@ -22,9 +22,14 @@
                     <li><a href="">Culture</a></li>
                 </ul>
             </nav>
+
             <div class="search">
                 <i class="fa fa-search"></i>
                 <input type="search" name="search-form" id="search-form" placeholder="Search">
+            </div>
+
+            <div class="mobile-menu">
+                <div class="mobile-menu-burger"></div>
             </div>
         </header>
         <div class="header-content">
@@ -196,5 +201,21 @@
         </div>
         <div class="mb30"></div>
     </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.mobile-menu')
+        let menuOpen = false
+
+        menuBtn.addEventListener('click', () =>{
+            if(!menuOpen){
+                menuBtn.classList.add('menu__open')
+                menuOpen = true;
+            }else{
+                menuBtn.classList.remove('menu__open')
+                menuOpen = false;
+            }
+        })
+
+    </script>
 </body>
 </html>
